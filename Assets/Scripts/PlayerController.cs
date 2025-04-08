@@ -1,3 +1,4 @@
+using System.Xml.Serialization;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -21,16 +22,29 @@ public class PlayerController : MonoBehaviour, ISomething, ISomethingB
     [Header("References")]
     [Tooltip("The Rigidbody2D component on this character.")]
     public Rigidbody2D rb;
-    
+
+    public Animator animator;
+    public SpriteRenderer spriteRenderer;
+    private const string IDLE = "IDLE";
+    private const string ATTACK = "ATTACK";
+    private const string WALK = "WALK";
+    private const string RUN = "RUN";
+    public string currentAnim = IDLE;
+    public bool lockAnimation = false;
+
     private void Start()
     {
         // Store a reference to the Rigidbody2D component on this object in rb.
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
     {
-        if(moveInput.magnitude != 0.0f)
+        HandleAnimation();
+
+        if (moveInput.magnitude != 0.0f)
         {
             facingDir = moveInput.normalized;
         }
@@ -68,6 +82,25 @@ public class PlayerController : MonoBehaviour, ISomething, ISomethingB
         }
     }
 
+    public void OnSprint(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Performed)
+        {
+            moveSpeed = 3;
+        }
+        else if (context.phase == InputActionPhase.Canceled) 
+        {
+            moveSpeed = 1;
+        }
+    }
+
+    public void OnAttack(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Performed) {
+            ChangeAnimation(ATTACK, true);
+        }
+    }
+
     // Testing if interacting works.
     private void TryInteract()
     {
@@ -85,5 +118,49 @@ public class PlayerController : MonoBehaviour, ISomething, ISomethingB
         {
             Debug.Log("Miissed");
         }
+    }
+
+    private void ChangeAnimation(string newState, bool isLocked = false)
+    {
+        if (currentAnim == newState) { return; }
+
+        if (lockAnimation) { return; }
+
+        animator.Play(newState);
+        currentAnim = newState;
+
+        if (isLocked)
+        {
+            lockAnimation = true;
+        }
+    }
+
+    private void HandleAnimation()
+    {
+        if(moveInput.x < 0.0f)
+        {
+            spriteRenderer.flipX = true;
+        }
+        else
+        {
+            spriteRenderer.flipX = false;
+        }
+
+        if (moveInput.magnitude == 0.0f)
+        {
+            ChangeAnimation(IDLE);
+        }
+        else if (moveInput.magnitude > 0.0f && moveSpeed == 1)
+        {
+            ChangeAnimation(WALK);
+        }else if(moveInput.magnitude > 0.0f && moveSpeed > 1)
+        {
+            ChangeAnimation(RUN);
+        }
+    }
+
+    public void UnlockAnimation()
+    {
+        lockAnimation = false;
     }
 }

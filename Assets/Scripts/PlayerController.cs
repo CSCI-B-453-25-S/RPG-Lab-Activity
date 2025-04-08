@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 
 // Force anything with this script to require a Rigidbody2D component.
 [RequireComponent(typeof(Rigidbody2D))]
-public class PlayerController : MonoBehaviour, ISomething, ISomethingB
+public class PlayerController : MonoBehaviour
 {
     [Header("Movement Fields")]
     [Tooltip("The movement speed of the player in meters per second.")]

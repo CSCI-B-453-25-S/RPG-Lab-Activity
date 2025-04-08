@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -21,11 +22,22 @@ public class PlayerController : MonoBehaviour, ISomething, ISomethingB
     [Header("References")]
     [Tooltip("The Rigidbody2D component on this character.")]
     public Rigidbody2D rb;
+    public Animator animator;
+    public SpriteRenderer sprite;
+    //Animator Constants
+    private const string IDLE = "IDLE";
+    private const string WALK = "WALK";
+    private const string RUN = "RUN";
+    private const string ATTACK = "ATTACK";
+    public string currentAnimationState = IDLE;
+    public bool lockAnimation = false;
     
     private void Start()
     {
         // Store a reference to the Rigidbody2D component on this object in rb.
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -43,6 +55,9 @@ public class PlayerController : MonoBehaviour, ISomething, ISomethingB
             // Attempt an interaction with something.
             TryInteract();
         }
+
+        // Call the animation handler
+        HandleAnimation();
     }
 
     private void FixedUpdate()
@@ -57,6 +72,26 @@ public class PlayerController : MonoBehaviour, ISomething, ISomethingB
     public void OnMoveInput(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
+    }
+
+    public void OnAttackInput(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Performed)
+        {
+            ChangeAnimationState(ATTACK, true);
+        }
+    }
+
+    public void OnSprintInput(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Performed)
+        {
+            moveSpeed = 3;
+        }
+        else if (context.phase == InputActionPhase.Canceled)
+        {
+            moveSpeed = 1;
+        }
     }
 
     //InputActions parameters needs to be held down
@@ -85,5 +120,54 @@ public class PlayerController : MonoBehaviour, ISomething, ISomethingB
         {
             Debug.Log("Miissed");
         }
+    }
+
+    private void HandleAnimation(){
+        //Handkes the spriteflipling
+        if(moveInput.x < 0.0f){
+            sprite.flipX = true;
+        }
+        else if(moveInput.x > 0.0f){
+            sprite.flipX = false;
+        }
+
+        //Handles the animation states
+        if(moveInput.magnitude == 0.0f)
+        {
+            ChangeAnimationState(IDLE);
+        }
+        else if (moveInput.magnitude > 0.0f && moveSpeed == 1)
+        {
+            ChangeAnimationState(WALK);
+        }
+        else if (moveInput.magnitude > 0.0f && moveSpeed == 3)
+        {
+            ChangeAnimationState(RUN);
+        }
+    }
+
+    private void ChangeAnimationState(string newState, bool isLocked = false)
+    {
+        // Prevent same animation from restarting.
+        if (currentAnimationState == newState) return;
+
+        // If locked and trying to change to something else, do nothing.
+        if (lockAnimation) return;
+
+        // Play the animation
+        animator.Play(newState);
+        currentAnimationState = newState;
+
+        // Lock if it's a locking animation
+        if (isLocked)
+        {
+            lockAnimation = true;
+        }
+    }
+
+    //Animation for Unlocking the animation
+    public void AnimationUnlock()
+    {
+        lockAnimation = false;
     }
 }

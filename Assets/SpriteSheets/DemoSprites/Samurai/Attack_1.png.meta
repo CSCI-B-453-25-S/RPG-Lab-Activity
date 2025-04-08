@@ -1,43 +1,31 @@
 fileFormatVersion: 2
-guid: d3cc17bc63750214cb66d4ea8becf501
+guid: f3f3df2c8db63a841b22f9e99bd275c3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3035956014389385451
-    second: mage_f_0
+      213: -8915327726919978405
+    second: Attack_1_0
   - first:
-      213: -1840796745116526119
-    second: mage_f_1
+      213: 4416717768442454902
+    second: Attack_1_1
   - first:
-      213: -3473850890814938842
-    second: mage_f_2
+      213: -8053095777402275025
+    second: Attack_1_2
   - first:
-      213: 1093572010777171010
-    second: mage_f_3
+      213: 4688295478533005478
+    second: Attack_1_3
   - first:
-      213: 5410999710358226974
-    second: mage_f_4
+      213: 3156989228384878200
+    second: Attack_1_4
   - first:
-      213: -4546658491801900177
-    second: mage_f_5
+      213: -4176445809780997858
+    second: Attack_1_5
   - first:
-      213: 5497770196610201028
-    second: mage_f_6
+      213: 9111255474114485651
+    second: Attack_1_6
   - first:
-      213: 5975225309399005822
-    second: mage_f_7
-  - first:
-      213: -2815214010226330014
-    second: mage_f_8
-  - first:
-      213: -4354493025541092856
-    second: mage_f_9
-  - first:
-      213: 7485127329307492290
-    second: mage_f_10
-  - first:
-      213: -3330833663053674637
-    second: mage_f_11
+      213: -6197699949570948299
+    second: Attack_1_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -70,7 +58,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -84,7 +72,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -108,7 +96,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -159,211 +147,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mage_f_0
+      name: Attack_1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 108
-        width: 32
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: be8d36fe8e1e12a20800000000000000
-      internalID: 3035956014389385451
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mage_f_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 108
-        width: 32
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9d952affc1d2476e0800000000000000
-      internalID: -1840796745116526119
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mage_f_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 108
-        width: 32
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6212d4225076acfc0800000000000000
-      internalID: -3473850890814938842
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mage_f_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 72
-        width: 32
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 244dea623f52d2f00800000000000000
-      internalID: 1093572010777171010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mage_f_4
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 72
-        width: 32
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e18c4af519bb71b40800000000000000
-      internalID: 5410999710358226974
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mage_f_5
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 72
-        width: 32
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f6b6221e03607e0c0800000000000000
-      internalID: -4546658491801900177
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mage_f_6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 36
-        width: 32
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4c53ea98dd00c4c40800000000000000
-      internalID: 5497770196610201028
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mage_f_7
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 36
-        width: 32
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e7ab6a3c2c34ce250800000000000000
-      internalID: 5975225309399005822
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mage_f_8
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 36
-        width: 32
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 266b1c9f5c95ee8d0800000000000000
-      internalID: -2815214010226330014
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mage_f_9
-      rect:
-        serializedVersion: 2
-        x: 0
+        x: 22
         y: 0
-        width: 32
-        height: 36
+        width: 55
+        height: 75
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -372,20 +162,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 80a05b31aabb193c0800000000000000
-      internalID: -4354493025541092856
+      spriteID: b527eb4faa4664480800000000000000
+      internalID: -8915327726919978405
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mage_f_10
+      name: Attack_1_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 151
         y: 0
-        width: 32
-        height: 36
+        width: 54
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -394,20 +184,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2cff0f9e5a380e760800000000000000
-      internalID: 7485127329307492290
+      spriteID: 6732b2dd8655b4d30800000000000000
+      internalID: 4416717768442454902
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mage_f_11
+      name: Attack_1_2
       rect:
         serializedVersion: 2
-        x: 64
+        x: 279
         y: 0
-        width: 32
-        height: 36
+        width: 59
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -416,8 +206,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 377c5c35e6086c1d0800000000000000
-      internalID: -3330833663053674637
+      spriteID: f2b3dbdbe08ad3090800000000000000
+      internalID: -8053095777402275025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_1_3
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 0
+        width: 65
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a0a708e5eb201140800000000000000
+      internalID: 4688295478533005478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_1_4
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 0
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87e7d9d0af0efcb20800000000000000
+      internalID: 3156989228384878200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_1_5
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 30
+        width: 38
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e11c55ce9a84a06c0800000000000000
+      internalID: -4176445809780997858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_1_6
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 29
+        width: 31
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39d5d68849ea17e70800000000000000
+      internalID: 9111255474114485651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_1_7
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 0
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5330e519bb85df9a0800000000000000
+      internalID: -6197699949570948299
       vertices: []
       indices: 
       edges: []
@@ -426,7 +326,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 1403fafc142639b49a7ac7c59b5585a2
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -435,19 +335,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      mage_f_0: 3035956014389385451
-      mage_f_1: -1840796745116526119
-      mage_f_10: 7485127329307492290
-      mage_f_11: -3330833663053674637
-      mage_f_2: -3473850890814938842
-      mage_f_3: 1093572010777171010
-      mage_f_4: 5410999710358226974
-      mage_f_5: -4546658491801900177
-      mage_f_6: 5497770196610201028
-      mage_f_7: 5975225309399005822
-      mage_f_8: -2815214010226330014
-      mage_f_9: -4354493025541092856
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

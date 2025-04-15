@@ -9,5 +9,15 @@
     PALADIN,
     RANGER,
     ROGUE,
-    WIZARD
+    WIZARD,
+
+    //Want to keep
+    STELLARONHUNTER,
+    STEVEJOB,
+    CRAZYUNCLESTEVE,
+
+    //Merge test enums
+    ARTIFCER,
+    BLOOD_HUNTER,
+    SORCERER,
 }

@@ -78,6 +78,9 @@ public class PlayerController : MonoBehaviour, ISomething, ISomethingB
     {
         if (context.phase == InputActionPhase.Performed)
         {
+            /**
+            * Some fun stuff here and there
+             */
             interactInput = true;
         }
     }
@@ -149,6 +152,9 @@ public class PlayerController : MonoBehaviour, ISomething, ISomethingB
         if (moveInput.magnitude == 0.0f)
         {
             ChangeAnimation(IDLE);
+            /**
+             * Some fun stuff here and there
+             */
         }
         else if (moveInput.magnitude > 0.0f && moveSpeed == 1)
         {
@@ -163,4 +169,16 @@ public class PlayerController : MonoBehaviour, ISomething, ISomethingB
     {
         lockAnimation = false;
     }
+
+    /**
+     * Some wicked cool lines of code
+     * that does something totally awesome, that WE WANT TO KEEP
+     * ---------------------------------------------------------
+     * LIES, the line was not cool and caused bugs
+     * _________________________________________________________
+     * Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+     * ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+     * ullamco laboris nisi ut aliquip exea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
+     * cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+     */
 }

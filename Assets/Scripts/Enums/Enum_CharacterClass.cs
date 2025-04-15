@@ -9,5 +9,10 @@
     PALADIN,
     RANGER,
     ROGUE,
-    WIZARD
+    WIZARD,
+
+    //Want to keep
+    STELLARONHUNTER,
+    MUSCLEMAN,
+    CRAZYUNCLESTEVE
 }

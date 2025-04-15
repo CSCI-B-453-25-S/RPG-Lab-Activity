@@ -9,5 +9,10 @@
     PALADIN,
     RANGER,
     ROGUE,
-    WIZARD
+    WIZARD,
+
+    //Merge test enums
+    ARTIFCER,
+    BLOOD_HUNTER,
+    SORCERER,
 }

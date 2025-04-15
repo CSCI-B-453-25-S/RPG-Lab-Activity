@@ -13,6 +13,11 @@
 
     //Want to keep
     STELLARONHUNTER,
-    MUSCLEMAN,
-    CRAZYUNCLESTEVE
+    STEVEJOB,
+    CRAZYUNCLESTEVE,
+
+    //Merge test enums
+    ARTIFCER,
+    BLOOD_HUNTER,
+    SORCERER,
 }
